@@ -51,27 +51,28 @@ As funcionalidades planejadas para o sistema incluem:
 
 ## 🗂️ Organização do projeto
 
-A estrutura de diretórios será documentada de acordo com os arquivos realmente adicionados ao repositório. Uma organização possível é:
-
 ```text
-Sistema-Gestao-Treinos/
+APP-FitTrack/
 ├── README.md
-├── docs/
-│   └── documentacao-do-projeto
-├── database/
-│   └── sistema_treinos.sql
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── imagens/
-└── backend/
-    └── arquivos-php
+└── TCC/
+    ├── index.html                 # Apresentação
+    ├── login.html
+    ├── cadastro.html
+    ├── inicio.html                # Painel e atalhos
+    ├── alunos.html
+    ├── treinos.html
+    ├── exercicios.html
+    ├── acompanhamento.html
+    ├── mensagens.html
+    ├── app.css                    # Estilos do protótipo
+    ├── app.js                     # Navegação e validações visuais
+    ├── style.css
+    ├── script.js
+    └── Banco de dados/
+        └── Banco_de_Dados_Sistema_Treinos.sql
 ```
 
-*Essa árvore é uma sugestão de organização, não uma representação garantida dos arquivos atuais.*
+As páginas de cadastro, login e funções estão implementadas como protótipo de interface. Elas ainda não enviam nem salvam dados no banco.
 
 ## 🚀 Como executar o projeto
 
@@ -102,7 +103,11 @@ cd NOME_DA_PASTA
 
 Substitua `NOME_DA_PASTA` pelo nome da pasta criada durante a clonagem.
 
-### 3. Configurar o ambiente
+### 3. Abrir a interface
+
+Abra `TCC/index.html` no navegador para ver a apresentação ou acesse diretamente `TCC/login.html`, `TCC/cadastro.html` e `TCC/inicio.html` para navegar pelo protótipo.
+
+### 4. Configurar o backend (próxima etapa)
 
 Se o projeto utilizar PHP e banco de dados local:
 
@@ -112,7 +117,7 @@ Se o projeto utilizar PHP e banco de dados local:
 4. Configure as credenciais de conexão de acordo com o ambiente local.
 5. Siga as instruções específicas adicionadas pela equipe à medida que a implementação avançar.
 
-### 4. Executar a aplicação
+### 5. Executar a aplicação
 
 A forma de execução dependerá da versão disponível no repositório. Caso exista apenas uma interface HTML, CSS e JavaScript, ela poderá ser aberta no navegador ou servida por um servidor local. Se houver integração com PHP e banco de dados, será necessário executar a aplicação pelo ambiente configurado.
 

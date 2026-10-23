@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Tela para criação e consulta de planos de treino. -->
+<!-- Faltam persistência, vínculo real com alunos e inclusão de exercícios nos planos. -->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Treinos | SAT</title>
+    <!-- Bootstrap organiza o layout; Font Awesome e Inter padronizam ícones e tipografia. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Estilos compartilhados do aplicativo. -->
+    <link rel="stylesheet" href="../../public/assets/css/app.css">
+</head>
+
+<body class="app-body" data-page="treinos">
+    <!-- Estrutura comum: a navegação lateral é montada pelo app.js. -->
+    <div class="app-layout">
+        <aside class="app-sidebar" data-app-sidebar></aside>
+        <main class="app-main">
+            <!-- Título preenchido pelo app.js e identificação provisória do usuário. -->
+            <header class="app-topbar">
+                <div>
+                    <h1 data-page-title></h1>
+                    <p>Monte e organize planos de treino.</p>
+                </div>
+                <div class="app-user"><span class="app-avatar"><i class="fas fa-user"
+                            aria-hidden="true"></i></span><span>Visitante</span></div>
+            </header>
+            <!-- Aviso de que os planos ainda não são persistidos. -->
+            <div class="app-notice" role="status">Protótipo: os planos de exemplo não são salvos no banco.</div>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <section class="app-card">
+                        <h2>Novo plano</h2>
+                        <!-- Formulário visual; falta carregar alunos e gravar o plano no backend. -->
+                        <form class="app-form mt-3" data-demo-form
+                            data-message="Plano validado para demonstração. Para salvar, conecte o backend.">
+                            <div class="mb-3"><label class="form-label" for="workout-title">Nome do treino</label><input
+                                    class="form-control" id="workout-title" name="titulo"
+                                    placeholder="Ex.: Treino A - superiores" required></div>
+                            <div class="mb-3"><label class="form-label"
+                                    for="workout-description">Descrição</label><textarea class="form-control"
+                                    id="workout-description" name="descricao" rows="4"
+                                    placeholder="Objetivo e orientações"></textarea></div>
+                            <div class="mb-3"><label class="form-label" for="workout-student">Aluno</label><select
+                                    class="form-select" id="workout-student" name="aluno">
+                                    <option value="">Selecione depois de cadastrar alunos</option>
+                                </select></div>
+                            <button class="btn app-button px-4" type="submit">Criar plano</button>
+                            <p class="mt-3 small" data-form-status role="status" hidden></p>
+                        </form>
+                    </section>
+                </div>
+                <div class="col-lg-7">
+                    <section class="app-card">
+                        <!-- Exemplo estático; a listagem deverá usar planos e exercícios do banco. -->
+                        <h2>Planos de treino</h2>
+                        <div class="border rounded-3 p-3 mt-3"><strong>Exemplo — Treino de adaptação</strong>
+                            <p class="muted mb-0 mt-2">Plano demonstrativo. Os exercícios e alunos serão vinculados após
+                                a integração com o sistema.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Navegação compartilhada e comportamento demonstrativo dos formulários. -->
+    <script src="../../public/assets/js/app.js"></script>
+</body>
+
+</html>

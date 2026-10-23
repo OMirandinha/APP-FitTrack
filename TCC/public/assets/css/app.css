@@ -1,0 +1,377 @@
+:root {
+    --app-ink: #173047;
+    --app-muted: #718096;
+    --app-primary: #0b3b5c;
+    --app-accent: #2a9d8f;
+    --app-bg: #f4f7fa;
+    --app-line: #e5ebf0;
+}
+
+body.app-body,
+body.auth-body {
+    min-height: 100vh;
+    background: var(--app-bg);
+    color: var(--app-ink);
+    font-family: 'Inter', sans-serif;
+}
+
+.app-layout {
+    min-height: 100vh;
+}
+
+.app-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 10;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    padding: 28px 18px;
+    background: #fff;
+    border-right: 1px solid var(--app-line);
+}
+
+.app-logo {
+    padding: 0 12px 30px;
+    color: var(--app-primary);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.app-logo i {
+    margin-right: 8px;
+    color: var(--app-accent);
+}
+
+.app-nav {
+    display: grid;
+    gap: 6px;
+}
+
+.app-nav a {
+    padding: 12px 14px;
+    border-radius: 12px;
+    color: #536579;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.app-nav a:hover,
+.app-nav a.active {
+    background: #eaf6f4;
+    color: #19796f;
+}
+
+.app-nav a i {
+    width: 24px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.app-sidebar-footer {
+    margin-top: auto;
+    padding: 16px 12px 0;
+    border-top: 1px solid var(--app-line);
+    color: var(--app-muted);
+    font-size: .85rem;
+}
+
+.app-main {
+    min-height: 100vh;
+    margin-left: 250px;
+    padding: 32px clamp(20px, 4vw, 56px);
+}
+
+.app-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.app-topbar h1 {
+    margin: 0;
+    color: var(--app-primary);
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 800;
+}
+
+.app-topbar p {
+    margin: 6px 0 0;
+    color: var(--app-muted);
+}
+
+.app-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #536579;
+    font-weight: 600;
+}
+
+.app-avatar {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: #dff2ee;
+    color: #19796f;
+}
+
+.app-notice {
+    margin-bottom: 24px;
+    padding: 13px 16px;
+    border: 1px solid #cce8e2;
+    border-radius: 12px;
+    background: #effaf7;
+    color: #28675e;
+    font-size: .93rem;
+}
+
+.app-card,
+.stat-card {
+    height: 100%;
+    padding: 22px;
+    border: 1px solid var(--app-line);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(18, 48, 71, .04);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.stat-icon {
+    display: grid;
+    width: 50px;
+    height: 50px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 15px;
+    background: #eaf6f4;
+    color: var(--app-accent);
+    font-size: 1.2rem;
+}
+
+.stat-value {
+    color: var(--app-primary);
+    font-size: 1.55rem;
+    font-weight: 800;
+}
+
+.stat-label,
+.muted {
+    color: var(--app-muted);
+}
+
+.app-card h2,
+.app-card h3 {
+    color: var(--app-primary);
+    font-size: 1.1rem;
+    font-weight: 750;
+}
+
+.app-card p:last-child {
+    margin-bottom: 0;
+}
+
+.quick-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--app-line);
+    border-radius: 16px;
+    background: #fff;
+    color: var(--app-primary);
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.quick-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(18, 48, 71, .08);
+    color: #19796f;
+}
+
+.quick-link i {
+    color: var(--app-accent);
+    font-size: 1.25rem;
+}
+
+.app-form .form-label {
+    color: #41556a;
+    font-weight: 650;
+}
+
+.app-form .form-control,
+.app-form .form-select {
+    min-height: 46px;
+    border-color: #dce5eb;
+    border-radius: 10px;
+}
+
+.app-form .form-control:focus,
+.app-form .form-select:focus {
+    border-color: var(--app-accent);
+    box-shadow: 0 0 0 .2rem rgba(42, 157, 143, .13);
+}
+
+.app-button {
+    border: 0;
+    border-radius: 10px;
+    background: var(--app-accent);
+    color: #fff;
+    font-weight: 700;
+}
+
+.app-button:hover {
+    background: #21867a;
+    color: #fff;
+}
+
+.auth-body {
+    display: grid;
+    padding: 24px;
+    place-items: center;
+}
+
+.auth-wrap {
+    display: grid;
+    width: min(960px, 100%);
+    min-height: 580px;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border: 1px solid var(--app-line);
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(11, 59, 92, .12);
+}
+
+.auth-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(28px, 5vw, 56px);
+    background: linear-gradient(145deg, #0b3b5c, #1b6d77);
+    color: #fff;
+}
+
+.auth-aside a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.auth-aside h1 {
+    margin: 25px 0 14px;
+    font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+    font-weight: 800;
+}
+
+.auth-aside p {
+    color: rgba(255, 255, 255, .82);
+    line-height: 1.7;
+}
+
+.auth-panel {
+    align-self: center;
+    padding: clamp(28px, 5vw, 56px);
+}
+
+.auth-panel h2 {
+    color: var(--app-primary);
+    font-weight: 800;
+}
+
+.auth-panel .form-control,
+.auth-panel .form-select {
+    min-height: 48px;
+    border-radius: 10px;
+}
+
+.auth-panel .btn {
+    min-height: 48px;
+    border-radius: 10px;
+    background: var(--app-accent);
+    color: #fff;
+    font-weight: 700;
+}
+
+.auth-panel .btn:hover {
+    background: #21867a;
+}
+
+.auth-back {
+    color: var(--app-accent);
+    font-weight: 650;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .app-sidebar {
+        position: static;
+        width: 100%;
+        padding: 16px;
+        border-right: 0;
+        border-bottom: 1px solid var(--app-line);
+    }
+
+    .app-logo {
+        padding: 0 8px 12px;
+    }
+
+    .app-nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 4px;
+    }
+
+    .app-nav a {
+        flex: 0 0 auto;
+        padding: 10px;
+        font-size: .9rem;
+    }
+
+    .app-sidebar-footer {
+        display: none;
+    }
+
+    .app-main {
+        margin-left: 0;
+        padding: 24px 16px;
+    }
+}
+
+@media (max-width: 620px) {
+    .auth-body {
+        padding: 12px;
+    }
+
+    .auth-wrap {
+        min-height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .auth-aside {
+        padding: 24px;
+    }
+
+    .auth-aside h1 {
+        margin-top: 24px;
+        font-size: 1.75rem;
+    }
+
+    .auth-panel {
+        padding: 28px 24px;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Painel inicial com indicadores e atalhos para as áreas do sistema. -->
+<!-- Faltam autenticação, carregamento dos indicadores e dados reais do backend. -->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel inicial | SAT</title>
+    <!-- Bootstrap organiza o layout; Font Awesome e Inter padronizam ícones e tipografia. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Estilos compartilhados do aplicativo. -->
+    <link rel="stylesheet" href="../../public/assets/css/app.css">
+</head>
+
+<body class="app-body" data-page="inicio">
+    <!-- Estrutura comum: a navegação lateral é montada pelo app.js. -->
+    <div class="app-layout">
+        <aside class="app-sidebar" data-app-sidebar></aside>
+        <main class="app-main">
+            <!-- Título preenchido pelo app.js e identificação provisória do usuário. -->
+            <header class="app-topbar">
+                <div>
+                    <h1 data-page-title></h1>
+                    <p>Visão geral da plataforma de treinos.</p>
+                </div>
+                <div class="app-user"><span class="app-avatar"><i class="fas fa-user"
+                            aria-hidden="true"></i></span><span>Visitante</span></div>
+            </header>
+            <!-- Aviso sobre valores ilustrativos exibidos no painel. -->
+            <div class="app-notice" role="status">Este painel é um protótipo. Os exemplos são demonstrativos e ainda não
+                vêm do banco de dados.</div>
+            <!-- Cartões-resumo: seus valores deverão vir de consultas ao banco. -->
+            <section class="row g-3 mb-4" aria-label="Resumo">
+                <div class="col-sm-6 col-xl-3">
+                    <article class="stat-card"><span class="stat-icon"><i class="fas fa-users"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <div class="stat-value">0</div>
+                            <div class="stat-label">Alunos cadastrados</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <article class="stat-card"><span class="stat-icon"><i class="fas fa-clipboard-list"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <div class="stat-value">0</div>
+                            <div class="stat-label">Planos de treino</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <article class="stat-card"><span class="stat-icon"><i class="fas fa-dumbbell"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <div class="stat-value">0</div>
+                            <div class="stat-label">Exercícios</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <article class="stat-card"><span class="stat-icon"><i class="fas fa-chart-line"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <div class="stat-value">—</div>
+                            <div class="stat-label">Acompanhamento</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- Atalhos para as páginas internas e a apresentação pública. -->
+            <section class="mb-4">
+                <h2 class="h5 fw-bold mb-3">Acessos rápidos</h2>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-xl-4"><a class="quick-link" href="alunos.html"><i class="fas fa-user-plus"
+                                aria-hidden="true"></i>Cadastrar e consultar alunos</a></div>
+                    <div class="col-sm-6 col-xl-4"><a class="quick-link" href="treinos.html"><i
+                                class="fas fa-clipboard-list" aria-hidden="true"></i>Organizar treinos</a></div>
+                    <div class="col-sm-6 col-xl-4"><a class="quick-link" href="exercicios.html"><i
+                                class="fas fa-dumbbell" aria-hidden="true"></i>Gerenciar exercícios</a></div>
+                    <div class="col-sm-6 col-xl-4"><a class="quick-link" href="acompanhamento.html"><i
+                                class="fas fa-chart-line" aria-hidden="true"></i>Acompanhar evolução</a></div>
+                    <div class="col-sm-6 col-xl-4"><a class="quick-link" href="mensagens.html"><i
+                                class="fas fa-comments" aria-hidden="true"></i>Abrir mensagens</a></div>
+                    <div class="col-sm-6 col-xl-4"><a class="quick-link" href="index.html"><i class="fas fa-globe"
+                                aria-hidden="true"></i>Voltar à apresentação</a></div>
+                </div>
+            </section>
+            <!-- Orientação de uso; a conexão entre cadastro, treinos e execução ainda falta. -->
+            <section class="app-card">
+                <h2>Comece por aqui</h2>
+                <p class="muted mt-2">Cadastre alunos e exercícios, depois monte planos de treino e acompanhe a
+                    execução. Para usar dados reais com segurança, o próximo passo é criar as rotas PHP e conectá-las ao
+                    MariaDB.</p>
+            </section>
+        </main>
+    </div>
+    <!-- Monta a navegação lateral e atualiza o título conforme a página. -->
+    <script src="../../public/assets/js/app.js"></script>
+</body>
+
+</html>
