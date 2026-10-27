@@ -36,8 +36,7 @@
             <div class="app-notice" role="status">Protótipo de interface: os dados não serão salvos até a conexão com o
                 backend PHP e o banco de dados.</div>
             <!-- Campos para identidade, perfil e senha; falta validação e criação de conta no servidor. -->
-            <form id="register-form" class="app-form" data-demo-form
-                data-message="Formulário validado. O cadastro será habilitado quando o backend estiver conectado.">
+            <form id="register-form" action="../backend/cadastro.php" method="POST">
                 <div class="mb-3">
                     <label class="form-label" for="register-name">Nome completo</label>
                     <input class="form-control" id="register-name" name="nome" type="text" autocomplete="name"

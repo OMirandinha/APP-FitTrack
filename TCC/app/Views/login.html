@@ -36,8 +36,7 @@
             <div class="app-notice" role="status">Protótipo de interface: o login ainda precisa ser conectado ao backend
                 PHP para autenticar usuários com segurança.</div>
             <!-- Campos de e-mail e senha; falta verificar as credenciais com segurança no servidor. -->
-            <form class="app-form" data-demo-form
-                data-message="Formulário validado. A autenticação será habilitada quando o backend estiver conectado.">
+            <form class="app-form" action="../backend/login.php" method="POST">
                 <div class="mb-3">
                     <label class="form-label" for="login-email">E-mail</label>
                     <input class="form-control" id="login-email" name="email" type="email" autocomplete="email"
